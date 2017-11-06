@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <style>
+    .boxWrap1 div {
+      background-size: 500px auto !important; /* 宽度需要和图片宽度一致, 注意和配置项保持一致 */ 
+      position: absolute; 
+      left: 0px;
+      top: 0px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="boxWrap1" id="box"></div>
+  <button onclick="add()">添加</button>
+  <script src="./js/wordAnimate.js"></script>
+  <script>
+    var word = new WordAnimate({
+      el: 'box',
+      data: ['幼儿园', '意大利', '南京车展', '瘦肉精'],
+      width: 500,
+      height: 300,
+      row: 3,
+      column: 5,
+    })
+
+    function add () {
+      word.add('喵儿快叫声好听的')
+    }
+
+    function update () {
+      word.update(['1', '2', '3', '4', '我去前面探探路'])
+    }
+  </script>
+</body>
+</html>
